@@ -1,10 +1,25 @@
-const http = require('http');
+const express = require('express');
+const bodyParser = require('body-parser')
 
-function responseRequest(request, response){
-  response.end('Hello World from http');
-}
+const app = express();
 
-let server = http.createServer(responseRequest);
+app.use(express.static('assets'));
+app.use(bodyParser.urlencoded({extended: true}));
 
-server.listen(3000);
+app.get('/', function(request, response){
+  response.sendFile('index.html', {
+    root: __dirname
+  });
+});
+
+//Receiving parameters by HTTP GET Method
+app.get('/greeting', function(){
+  response.send(`Hello ${request.query.name}`)
+});
+
+app.post('/name', function(request, response){
+  response.send(`${request.body.name}`);
+});
+
+app.listen(3000);
 
