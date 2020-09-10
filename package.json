@@ -1,0 +1,22 @@
+{
+  "name": "simple_node_webapp",
+  "version": "1.0.0",
+  "description": "",
+  "author": "Diego Toro <toro.teutsch.d@gmail.com>",
+  "license": "MIT",
+  "main": "app/server.js",
+  "scripts": {
+    "start": "node app/server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "nodejs",
+    "bootstrap",
+    "express"
+  ],
+  "dependencies": {
+    "express": "^4.16.4",
+    "ejs": "^3.1",
+    "cookie-session": "^1.4"
+  }
+}
