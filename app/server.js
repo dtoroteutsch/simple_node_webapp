@@ -22,7 +22,8 @@ app.get('/greeting', function(request, response){
 });
 
 app.get('/visits', function(request, response){
-  request.session.visits = 1;
+  request.session.visits = request.session.visits || 0;
+  request.session.visits = request.session.visits + 1;
   response.send(`${request.session.visits} visita(s)`);
 });
 
