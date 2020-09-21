@@ -17,6 +17,11 @@
   "dependencies": {
     "express": "^4.16.4",
     "ejs": "^3.1",
-    "cookie-session": "^1"
+    "cookie-session": "^1",
+    "sqlite3": "5",
+    "sequelize": "^6.3",
+    "sequelize-cli": "^6",
+    "pug": "3",
+    "method-override": "3" 
   }
 }

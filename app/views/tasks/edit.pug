@@ -1,0 +1,9 @@
+doctype html
+html
+  head
+    title Tasks
+  body
+    form(action=`/tasks/${task.id}?_method=PUT` method="POST")
+      textarea(name="description" placeholder="")=task.description
+      input(type="submit" value="Actualizar")
+
